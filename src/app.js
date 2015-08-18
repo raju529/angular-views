@@ -14,5 +14,10 @@ app.config(function($routeProvider){
         .when("/user/:userId", {
             url: "/user/:userId",
             templateUrl: "templates/user.html"
+        })
+        .when("/signup", {
+            url: "/signup",
+            templateUrl: "templates/signup.html",
+            controller:"SignupController"
         });
 });
