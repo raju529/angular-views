@@ -1,0 +1,30 @@
+{
+  "name": "angular-views",
+  "version": "1.0.0",
+  "description": "It contains angular views",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "views",
+    "bootstrap"
+  ],
+  "author": "vravi",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.4.3",
+    "angular-route": "^1.4.4",
+    "bootstrap": "^3.3.5",
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-cssmin": "^0.13.0",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
