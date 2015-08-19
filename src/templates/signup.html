@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1 class="well">Hello Plunker!</h1>
+<h2>HTML Form Input Validation Using HTML5</h2>
+<div ng-controller="SignupController">
+    {{currentDate}}
+    date :{{currentDate | date: "shortTime"}}
+
+    <form id="formTest">
+        <table>
+            <tr>
+                <td>
+                    <label for="txtName">Name<span class="required">*</span></label>
+                </td>
+                <td>
+                    <input type="text" id="txtName" name="name" ng-model="userName" required autofocus placeholder="Enter user name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="numAge">Age</label>
+                </td>
+                <td>
+                    <input type="text" id="numAge" name="age" ng-model="age" placeholder="Enter Age">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for>Gender<span class="required">*</span></label>
+                </td>
+                <td>
+                    <select id="age" ng-model="gender">
+                        <option value="">Please Select..</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtPhone">Phone<span class="required">*</span></label>
+                </td>
+                <td>
+                    <input type="tel" id="txtPhone" name="phone" ng-model="phoneNumber" required placeholder="Enter your phone number">
+                </td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="button" value="SEND" ng-click="getUserData()" id="btnSubmit">&nbsp;
+                    <input type="button" value="CLEAR" id="btnReset" ng-click="resetUser()">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <label>Search:</label> <input ng-model="filt.$"/>
+    <label>UserName</label><input ng-model="filt.UserName"/>
+    <div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Sr.No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="user in users | filter:filt">
+                <td ng-bind="{{$index + 1}}"></td>
+                <td>{{user.UserName | capitalize:3 }}</td>
+                <td ng-bind="user.age"></td>
+                <td ng-bind="user.gender | lowercase"></td>
+                <td>{{user.phoneNumber | number}}</td>
+                <td><button class="btn btn-primary" ng-click="removeRow($index)">Delete</button></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+
+</html>
