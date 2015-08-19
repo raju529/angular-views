@@ -19,5 +19,6 @@ app.config(function($routeProvider){
             url: "/signup",
             templateUrl: "templates/signup.html",
             controller:"SignupController"
+
         });
 });
