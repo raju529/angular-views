@@ -3,4 +3,5 @@
  */
 app.controller("HomeController", function($scope){
     $scope.home = "home controller";
+    $scope.new = "new controller";
 });
