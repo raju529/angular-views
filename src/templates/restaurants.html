@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <h3 class="well">Restaurants List</h3>
+        <header></header>
+        <ul class="list-group">
+            <li class="list-group-item"  ng-repeat="rest in restaurantsList">
+               <div>
+                   <h3><a ng-href="#/restaurant/{{rest['Restaurant ID']}}/ravi">{{rest["Restaurant name"]}}</a></h3>
+                   <label>Opening
+                   Time:</label>{{rest.Opens}}
+                   <label>Closing
+                   Time:</label>{{rest.Closes}}
+                   <p>{{rest.Description}}</p>
+               </div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -9,8 +9,10 @@
     <script src="../node_modules/angular/angular.min.js"></script>
     <script src="../node_modules/angular-route/angular-route.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lodash.js"></script>
 </head>
 <body>
+<div ng-include="'templates/header.html'"></div>
 <ng-view></ng-view>
 
 <script src="app.js"></script>
@@ -18,6 +20,8 @@
  <script src="scripts/HomeController.js"></script>
  <script src="scripts/SignupController.js"></script>
  <script src="scripts/EmployeeController.js"></script>
+<script src="scripts/RestaurantsController.js"></script>
+<script src="scripts/RestaurantController.js"></script>
 
 
 
