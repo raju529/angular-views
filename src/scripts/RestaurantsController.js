@@ -15,4 +15,15 @@ app.controller("RestaurantsController", function($scope, $http){
     });
     //$scope.restaurantsList = angular.fromJson(restaurants);
     console.log($scope.restaurantsList);
+    $scope.rating = 0;
+    $scope.ratings = [{
+        current: 5,
+        max: 10
+    }, {
+        current: 3,
+        max: 5
+    }];
+    $scope.getSelectedRating = function (rating) {
+        console.log(rating);
+    }
 });

@@ -5,7 +5,7 @@ app.controller("RestaurantController", function($scope, $routeParams, $http){
         $scope.restaurantsList =result;
         $scope.restaurant = _.filter($scope.restaurantsList, function(item){
             console.log(item);
-            return item["Restaurant ID"] === $routeParams.restaurantId;
+            return item.id === $routeParams.restaurantId;
         })[0];
         console.log($scope.restaurant);
     });
