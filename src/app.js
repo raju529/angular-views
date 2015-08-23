@@ -11,6 +11,13 @@ app.config(function($routeProvider){
             templateUrl: "templates/home.html",
             controller: "HomeController"
         })
+
+        .when("/registration", {
+            url:"/",
+            templateUrl: "templates/registration.html",
+            controller: "RegisterController"
+        })
+
         .when("/user/:userId", {
             url: "/user/:userId",
             templateUrl: "templates/user.html"
