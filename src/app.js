@@ -8,8 +8,13 @@ app.config(function($routeProvider){
     })
         .when("/", {
             url:"/",
-            templateUrl: "templates/home.html",
-            controller: "HomeController"
+            templateUrl: "templates/restaurants.html",//"templates/home.html",
+            controller: "RestaurantsController",//"HomeController"
+        })
+        .when("/restaurant/:restaurantId/ravi", {
+            url:"/restaurant/:restaurantId",
+            templateUrl: "templates/restaurant.html",//"templates/home.html",
+            controller: "RestaurantController",//"HomeController"
         })
 
         .when("/registration", {
@@ -21,5 +26,11 @@ app.config(function($routeProvider){
         .when("/user/:userId", {
             url: "/user/:userId",
             templateUrl: "templates/user.html"
+        })
+        .when("/signup", {
+            url: "/signup",
+            templateUrl: "templates/signup.html",
+            controller:"SignupController"
+
         });
 });
